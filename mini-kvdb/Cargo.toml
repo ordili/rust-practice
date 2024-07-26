@@ -1,5 +1,5 @@
 [package]
-name = "mini-bitcask-kvdb"
+name = "mini-kvdb"
 version = "0.1.0"
 edition = "2021"
 
