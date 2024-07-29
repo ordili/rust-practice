@@ -68,7 +68,7 @@ impl<T> LinkedList<T> {
         let mut new_node = Box::new(Node::new(t));
         match head {
             Some(head_ptr) => unsafe {
-                let mut node = Box::from_raw(head_ptr.as_ptr());
+                let node = Box::from_raw(head_ptr.as_ptr());
                 new_node.next = node.next;
                 (*head_ptr.as_ptr()).next = NonNull::new(Box::into_raw(new_node));
                 self.len += 1;
